@@ -13,7 +13,7 @@ To write a program to predict the type of species of the Iris flower using the S
 4. Make Predictions and Evaluate Accuracy
 5. Generate Confusion Matrix
 ## Program:
-```
+~~~
 /*
 Program to implement the prediction of iris species using SGD Classifier.
 Developed by:MADHUMITHA R 
@@ -52,11 +52,18 @@ print(f"Accuracy: {accuracy:.3f}")
 cm = confusion_matrix(y_test, y_pred)
 print("Confusion Matrix:")
 print(cm)
-```
+plt.figure(figsize=(6,4))
+sns.heatmap(cm, annot=True, cmap="Blues", fmt='d', xticklabels=iris.target_names, yticklabels=iris.target_names)
+plt.xlabel("Predicted Label")
+plt.ylabel("True Label")
+plt.title("Confusion Matrix")
+plt.show()
+~~~
 
 ## Output:
 ![prediction of iris species using SGD Classifier](sam.png)
-<img width="1589" height="886" alt="Screenshot 2026-05-18 152610" src="https://github.com/user-attachments/assets/199a7029-3ce6-40f4-a0e1-94f26d154fa7" />
+<img width="1269" height="801" alt="Screenshot 2026-05-18 153223" src="https://github.com/user-attachments/assets/57d550ec-31ac-464d-aba3-10f9a344236e" />
+
 
 
 ## Result:
